@@ -1,11 +1,11 @@
 import type { Rule } from "eslint";
 import type { Node } from "estree";
 
-declare function traverse<TNode = Node>(
+declare function traverse(
   context: Rule.RuleContext,
-  node: TNode,
+  node: Node,
   visitor: (
-    path: traverse.Path<TNode>
+    path: traverse.Path
   ) => void | typeof traverse.SKIP | typeof traverse.STOP
 ): void;
 
@@ -13,11 +13,11 @@ declare namespace traverse {
   const SKIP: unique symbol;
   const STOP: unique symbol;
 
-  interface Path<TNode = Node> {
-    node: TNode;
-    parent: TNode | null;
+  interface Path {
+    node: Node;
+    parent: Node | null;
     parentKey: string | null;
-    parentPath: Path<TNode> | null;
+    parentPath: Path | null;
   }
 }
 
