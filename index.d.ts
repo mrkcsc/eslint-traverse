@@ -4,9 +4,7 @@ import type { Node } from "estree";
 declare function traverse(
   context: Rule.RuleContext,
   node: Node,
-  visitor: (
-    path: traverse.Path
-  ) => void | typeof traverse.SKIP | typeof traverse.STOP
+  visitor: traverse.Visitor
 ): void;
 
 declare namespace traverse {
@@ -19,6 +17,8 @@ declare namespace traverse {
     parentKey: string | null;
     parentPath: Path | null;
   }
+
+  type Visitor = (path: Path) => void | typeof SKIP | typeof STOP;
 }
 
 export = traverse;
