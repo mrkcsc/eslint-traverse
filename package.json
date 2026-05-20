@@ -1,8 +1,14 @@
 {
   "name": "eslint-traverse",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Create a sub-traversal of an AST node in your ESLint plugin",
   "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "CHANGELOG.md"
+  ],
   "author": "Jamie Kyle <jamie.kyle@discordapp.com>",
   "license": "MIT",
   "repository": {
@@ -30,5 +36,9 @@
     "babel",
     "babylon",
     "plugin"
-  ]
+  ],
+  "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "@types/estree": "^1.0.9"
+  }
 }

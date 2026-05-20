@@ -1,0 +1,13 @@
+# Changelog
+
+## 1.1.0
+
+- Added TypeScript declarations (`index.d.ts`). No runtime changes.
+
+## 1.0.1
+
+- Skip traversal of `null` nodes.
+
+## 1.0.0
+
+- Initial release.
